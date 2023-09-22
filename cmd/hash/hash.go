@@ -1,6 +1,9 @@
 package hash
 
-import "github.com/spf13/cobra"
+import (
+	sha256Cmd "github.com/Ice-nebula/nixl/cmd/hash/sha256"
+	"github.com/spf13/cobra"
+)
 
 func NewHashCommand() *cobra.Command {
 	cmd := &cobra.Command{
@@ -15,5 +18,6 @@ Supported algorithms:
    - sha512: Calculate a SHA-512 hash (e.g., 'nixl hash sha512 [text]')
 `,
 	} //end cmd
+	cmd.AddCommand(sha256Cmd.NewSha256Command())
 	return cmd
 } //end method
