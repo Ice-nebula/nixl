@@ -1,6 +1,7 @@
 package hash
 
 import (
+	md5Cmd "github.com/Ice-nebula/nixl/cmd/hash/md5"
 	sha256Cmd "github.com/Ice-nebula/nixl/cmd/hash/sha256"
 	"github.com/spf13/cobra"
 )
@@ -19,5 +20,6 @@ Supported algorithms:
 `,
 	} //end cmd
 	cmd.AddCommand(sha256Cmd.NewSha256Command())
+	cmd.AddCommand(md5Cmd.NewMd5Command())
 	return cmd
 } //end method
