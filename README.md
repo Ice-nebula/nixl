@@ -13,9 +13,9 @@ Nixl is a versatile command-line utility crafted in Go, designed to streamline a
 The 'hash' command allows you to generate hash values for input text using various algorithms.
 
 Supported algorithms:
-   - md5: Calculate an MD5 hash (e.g., 'nixl hash md5 "hello world"')
-- sha256: Calculate a SHA-256 hash (e.g., 'nixl hash [text]'
-   - sha512: Calculate a SHA-512 hash (e.g., 'nixl hash sha512 [text]')
+   1.  md5: Calculate an MD5 hash (e.g., 'nixl hash md5 "hello world"')
+2. sha256: Calculate a SHA-256 hash (e.g., 'nixl hash [text]'
+   3. sha512: Calculate a SHA-512 hash (e.g., 'nixl hash sha512 [text]')
 
 ## Benefits
 
