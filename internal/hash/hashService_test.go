@@ -42,3 +42,20 @@ func Test_HashMd5_with_empty_argument_should_be_error(t *testing.T) {
 	assert.Equal(t, expected, err.Error())
 	assert.Equal(t, "", actual)
 }
+
+func Test_sha512_with_empty_argument_should_be_get_error(t *testing.T) {
+	hasher := NewHashService()
+	actual, err := hasher.Sha512("")
+	expected := ""
+	assert.Error(t, err)
+	assert.Equal(t, "text can not be empty", err.Error())
+	assert.Equal(t, expected, actual)
+}
+
+func Test_sha_512_with_text_should_be_get_sha512hash(t *testing.T) {
+	hasher := NewHashService()
+	actual, err := hasher.Sha512("sha512test")
+	expected := "bfed8822423f783480b00b04cecd2f3c21059ddc316556e36e8687c3a7dcb045bf6988133c1c743bee6d7c4b01afe5d339f7dcde6c1cc9a02bc1b57cd6e5e9ef"
+	assert.NoError(t, err)
+	assert.Equal(t, expected, actual)
+}
