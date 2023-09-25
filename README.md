@@ -8,6 +8,15 @@ Nixl is a versatile command-line utility crafted in Go, designed to streamline a
 - **Checksums**: Generate and verify checksums for files with ease.
 - **Base64 Encoding/Decoding**: Encode text to base64 or decode base64-encoded data effortlessly.
 
+## Usage
+### hash command
+The 'hash' command allows you to generate hash values for input text using various algorithms.
+
+Supported algorithms:
+   - md5: Calculate an MD5 hash (e.g., 'nixl hash md5 "hello world"')
+- sha256: Calculate a SHA-256 hash (e.g., 'nixl hash [text]'
+   - sha512: Calculate a SHA-512 hash (e.g., 'nixl hash sha512 [text]')
+
 ## Benefits
 
 - **Simplify Development**: Nixl provides essential tools for developers in one lightweight package, simplifying common tasks.
